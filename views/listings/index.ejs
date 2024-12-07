@@ -1,0 +1,130 @@
+ <!-- <% layout("/layouts/boilerplate") %> -->
+
+
+
+
+
+
+
+
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Community Engagement</title>
+     <style>
+         body {
+             font-family: Arial, sans-serif;
+             margin: 0;
+             padding: 0;
+             color: #333;
+         }
+         header {
+             color: #007BFF;
+             padding: 20px;
+             text-align: center;
+         }
+         nav {
+             display: flex;
+             justify-content: center;
+             background-color: #f9f9f9;
+         }
+         nav a {
+             color: #007BFF;
+             padding: 14px 20px;
+             text-decoration: none;
+             text-align: center;
+         }
+         nav a:hover {
+             color: #0056b3;
+         }
+         .container {
+             padding: 20px;
+         }
+         footer {
+             text-align: center;
+             padding: 10px;
+             color: #007BFF;
+         }
+         .center-image {
+             display: flex;
+             justify-content: center;
+             margin: 20px 0;
+         }
+         .center-image img {
+             width: 300px;
+             height: 300px;
+             object-fit: cover;
+         }
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            color: #007BFF;
+            padding: 20px;
+            text-align: center;
+        }
+        .center-images {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Space between images */
+            margin: 20px 0;
+        }
+        .center-images img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+     </style>
+ </head>
+ <body>
+     <header>
+         <h1>Welcome to Our Gated Community</h1>
+         <p>A Safe, Secure, and Peaceful Environment</p>
+     </header>
+     <div class="center-images">
+        <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" >
+        <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=600" >
+    </div>
+     <hr>
+     <div class="container">
+         <section class="description">
+             <h2>About Our Gated Community</h2>
+             <p>Welcome to our gated community, where safety, comfort, and convenience come together to create the ideal living environment. Our community offers a secure, serene, and exclusive atmosphere, with controlled access points to ensure the safety of all residents. With state-of-the-art security systems, professional management, and a focus on maintaining a peaceful environment, our community is the perfect place for families, professionals, and retirees.</p>
+             <p>In addition to the security and privacy, our community offers various amenities such as parks, walking trails, sports facilities, and community centers where residents can socialize and engage in recreational activities. We believe in creating an inclusive and welcoming environment where neighbors can build lasting relationships and enjoy a high quality of life.</p>
+             <p>Join us in making our gated community a place where everyone feels at home, safe, and connected!</p>
+         </section><br>
+         <hr>
+     <h3>Our Upcoming Events --> </h3>    
+     <br>
+         <section id="about" class="about">
+             <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2">
+                 <% for(let list of allListing){%>
+                     <a href="/get/<%= list._id %>" class="listing-link">
+                 <div class="card col" style="width: 18rem;">
+                         <div class="card-img-overlay"></div>
+                     <div class="card-body">
+                     <p class="card-text">
+                         <h5><b><i><%= list.title %></i></b></h5>
+                         <h6><i> <%= list.description %></i></h6>
+                     </p>
+                     </div>
+                 </div>
+             </a>
+                 <%} %></div><br><hr><br>
+             <h2>About Us</h2>
+             <p>Our gated community is built with the needs of modern families in mind. We prioritize safety, comfort, and a strong sense of belonging. Whether you’re looking for a peaceful retreat or an active social life, our community offers it all. We are committed to maintaining high standards of living and providing the best possible experience for our residents.</p>
+         </section>
+     </div>
+     <footer>
+         <p>&copy; <i class="fa-brands fa-whatsapp"> | </i> <i class="fa-brands fa-facebook"></i> | <i class="fa-brands fa-instagram"></i> | 9390357601 | Residency1@gmail.com | 2024 Gated Community. All rights reserved.</p>
+     </footer>
+ </body>
+ </html>
+ 
