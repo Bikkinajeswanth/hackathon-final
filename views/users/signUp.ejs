@@ -3,21 +3,59 @@
     <div class="col-8 offset-2">
         <body>
             <h2>SignUp and Rock</h2><br><br>
-        <form action="/signUp" method="POST" class="needs-validation" >
-            <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-            <input name="username" id="username" placeholder="enter username here" type="text" class="form-control" required/>
-            </div><br>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-            <input name="email" id="email" placeholder="enter your email here" type="email" class="form-control" required/>
-            </div><br>
-            <div class="mb-3"> 
-            <label for="password" class="form-label">Password</label>
-            <input name="password" id="password" placeholder="enter your password here" type="password" class="form-control" required/>
-            </div><br>
-            <button class="btn btn-dark">Enter</button>
-            <br>
-        </form>
+            <!-- Container for Search Bar and Form -->
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <!-- Search Bar -->
+                <form action="/search" method="GET" class="d-flex">
+                    <input 
+                        type="text" 
+                        name="query" 
+                        id="searchQuery" 
+                        placeholder="Search..." 
+                        class="form-control" 
+                        style="width: 250px;" 
+                        required 
+                    />
+                    <button type="submit" class="btn btn-secondary">Search</button>
+                </form>
+                <!-- Sign-Up Form -->
+                <form action="/signUp" method="POST" class="needs-validation" style="flex-grow: 1;">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input 
+                            name="username" 
+                            id="username" 
+                            placeholder="Enter username here" 
+                            type="text" 
+                            class="form-control" 
+                            required 
+                        />
+                    </div><br>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input 
+                            name="email" 
+                            id="email" 
+                            placeholder="Enter your email here" 
+                            type="email" 
+                            class="form-control" 
+                            required 
+                        />
+                    </div><br>
+                    <div class="mb-3"> 
+                        <label for="password" class="form-label">Password</label>
+                        <input 
+                            name="password" 
+                            id="password" 
+                            placeholder="Enter your password here" 
+                            type="password" 
+                            class="form-control" 
+                            required 
+                        />
+                    </div><br>
+                    <button class="btn btn-dark">Sign Up</button>
+                </form>
+            </div>
         </body>
-    </div></div>
+    </div>
+</div>
